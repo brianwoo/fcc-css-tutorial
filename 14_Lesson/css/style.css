@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+  display: flex;
+
+  /* justify-content is for MAIN-axis alignment */
+  /* axis controlled by flex-direction */
+  justify-content: space-evenly;
+  gap: 1rem;
+
+  /* align-items is for CROSS-axis alignment */
+  /* axis controlled by flex-direction */
+  align-items: center;
+
+  /* align-content controls the conent in MAIN-axis */
+  /* align-content: flex-end; */
+
+  /* align direction: row, column, 
+  row-reverse, column-reverse */
+  /* default is row */
+  flex-direction: row;
+
+  /* flex-wrap will wrap when content overflow */
+  flex-wrap: wrap;
+
+  /* flex-flow == flex-direction + flex-wrap */
+  /* flex-flow: row wrap; */
+}
+
+.box {
+  /* min-width: 100px; */
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+
+  /* turning each box into a flex container */
+  display: flex;
+
+  /* Main-axis center the number */
+  justify-content: center;
+
+  /* Cross-axis center the number */
+  align-items: center;
+
+  /* similar to min-width */
+  /* flex-basis: 100px; */
+
+  /* grow to take up the rest of the container */
+  /* grow 1x of the flex-basis */
+  /* flex-grow: 1; */
+
+  /* flex == flex-grow + flex-shrink + flex-basis */
+  flex: 1 1 150px;
+}
+
+.box:nth-child(2) {
+  /* grow 2x of the flex-basis */
+  flex-grow: 2;
+
+  /* shrink 2x of the flex-basis */
+  flex-shrink: 2;
+
+  flex-basis: 150px;
+}

@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  /* content-box calculates width without margin, border and padding */
+  /* which means if width is set to 400px, the content (bluebox in devtool) takes 400px*/
+  /* box-sizing: content-box; */
+
+  /* border-box calculates width also with border and padding */
+  /* (NOT with margin coz margin is outside of the border) */
+  box-sizing: border-box;
+}
+
+
+.container {
+  border: 10px double red;
+  font-size: 1.5rem;
+  margin: 1.5em;
+  padding: 1.5em;
+
+  /* outline is not part of the border-box model, */
+  /* so it does not show in the devtool box sizing at the bottom */
+  outline: 5px solid purple;
+  outline-offset: -20px;
+}
+
+.circle {
+  /* margin left & right: auto means it set this element to center */
+  margin: 3rem auto;
+  background-color: gold;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  outline: 2px solid red;
+  outline-offset: 0.25rem;
+}

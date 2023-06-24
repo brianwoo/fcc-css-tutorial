@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* main {
+  background-color: aqua;
+  width: 50%;
+} */
+
+
+/* p is a block level element */
+/* block level elements takes up 100% width (of the parent) by default */
+/* block level elements stack on top of each other */
+p {
+  background-color: lightgrey;
+}
+
+
+/* the opposite class is a <span>, which is an inline element */
+/* inline elements only takes up the width of the content */
+/* for inline elements, margin will NOT work */
+/* for inline elements, height will NOT work */
+/* As a workaround, use inline-block instead, inline-block is like */
+/* a hybrid of inline and block */
+.opposite {
+  display: inline-block;
+  background-color: #333;
+  color: whitesmoke;
+  margin-top: 100px;
+  height: 100px;
+}
+
+
+/* ul is block level element */
+ul {
+  background-color: black;
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+/* li is block level element */
+/* but we change it to inline-block to put them side-by-side */
+li {
+  display: inline-block;
+  margin-inline: 0.5rem;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li a:hover,
+li a:focus {
+  text-decoration: underline;
+}

@@ -1,0 +1,58 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  /* 50% width relative to the parent (body) -> half of the page */
+  width: 50%;
+}
+
+body {
+  /* TIP: using min-height: 100vh can make the body occupy the 100% height of the page */
+  min-height: 100vh;
+}
+
+h1 {
+  border: 2px dashed red;
+  /* 50% width relative to the parent (header) -> 25% of the page*/
+  width: 50%;
+
+  /* NOTE: When font-size is set to an element, em looks at the ELEMENT ITSELF, not PARENT  */
+  /* padding em is relative to the font size */
+  /* 3x ROOT font size * 0.5x = 1.5x for padding (24 pixels) */
+  font-size: 3rem;
+  padding: 0.5em;
+}
+
+main {
+  /* vw is viewport width, 50vw is 50% of the viewport width */
+  width: 50vw;
+  background-color: skyblue;
+  font-size: 2rem;
+}
+
+p {
+  /* Default size is 16px */
+  /* We usually don't see absolute font-size */
+  /* because css font-size overrides browser font-size in the settings */
+  /* font-size: 16px; */
+
+
+  /* rem stands for 'root em', relative to the root font size */
+  /* NOTE: rem is relative the ROOT, not the PARENT */
+  /* 2rem means 2x bigger than the ROOT font size */
+  /* font-size: 2rem; */
+
+
+  /* NOTE: em is relative the PARENT */
+  /* 2em means 2x bigger than the PARENT font size */
+  /* main -> 2x of ROOT font size, 2em of the main -> 4x (64 pixels) */
+  font-size: 2em;
+
+  /* 40 characters before the line wrap */
+  width: 40ch;
+
+}

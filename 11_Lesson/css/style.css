@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.block {
+  width: 30vw;
+  height: 30vw;
+  background-color: black;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* float: left is to make this element stay left */
+/* and the other content fill up the space around it (on the right) */
+.left {
+  float: left;
+  margin-right: 1rem;
+}
+
+/* when float is used, the margin of the paragraph does not work correctly */
+/* p {
+  margin-left: 100px;
+} */
+
+.right {
+  float: right;
+  margin-left: 1rem;
+}
+
+
+/* clear indicates which sides of an element's box(es) may not */
+/* be adjacent to an earlier floating box. */
+.clear {
+  clear: both;
+}
+
+/* if we apply a container to a float element */
+/* the float element might not be contained properly */
+section {
+  background-color: bisque;
+  border: 1px solid #333;
+  padding: 1rem;
+  /* using flow-root to remedy the container issue */
+  display: flow-root;
+}

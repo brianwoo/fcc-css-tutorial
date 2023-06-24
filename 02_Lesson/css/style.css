@@ -1,0 +1,44 @@
+main {
+  font-family: monospace;
+}
+
+body {
+  font-size: 22px;
+}
+
+/* h1 or h2 */
+h1,
+h2 {
+  color: blue;
+}
+
+/* span inside a p */
+p span {
+  text-transform: uppercase;
+  background-color: gold;
+}
+
+/* * selects everything */
+/* * {
+  font-family: monospace;
+} */
+
+/* class has more specificity than element */
+/* which means red is overriden by gray */
+.gray {
+  color: gray;
+}
+
+/* order matters, red is read AFTER purple */
+/* to override red and gray, use !important */
+p {
+  color: purple;
+}
+
+p {
+  color: red;
+}
+
+#second {
+  font-style: italic;
+}
